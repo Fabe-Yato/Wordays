@@ -19,6 +19,7 @@ routes.delete("/users/:id", usersController.deleteUser);
 
 //ingles
 routes.get("/ingles", englishWordsController.getEnglishWords);
-routes.post("/ingles", englishWordsController.insertEnglishWords)
+routes.post("/ingles", englishWordsController.insertEnglishWords);
+routes.delete("/ingles", englishWordsController.deleteEnglishWords)
 
 export default routes;

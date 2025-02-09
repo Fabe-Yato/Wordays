@@ -2,19 +2,13 @@ import usersModel from "../models/usersModel.js"
 
 export default {
     async getUsers(req, res){
-        const email = "fabibinho2@gmail.com"
-        const senha = "Fabia";
-        const users = await usersModel.find();
-
-        if(email && senha){
-            users.find(usuario => {
-                if(usuario.email === email && usuario.password === senha){
-                    return res.status(200).json(usuario);
-                }
-            });
+        try{
+            const users = await usersModel.find();
+            return res.status(200).json(users);
+        }catch(e){
+            res.status(500).json({erro: "Não foi possivel localizar os usuários"})
         }
-
-        return res.status(200).json(users);
+        
     },
 
     async insertUsers(req, res){
