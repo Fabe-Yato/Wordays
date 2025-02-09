@@ -1,0 +1,16 @@
+.language-marker-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 170px;
+    color: #FFF;
+}
+
+.language-marker-container img{
+    width: 45px;
+}
+
+.language-marker-container h2{
+    font-size: 2.5rem;
+    padding-left: 10px;
+}
