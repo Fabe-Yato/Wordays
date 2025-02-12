@@ -3,11 +3,11 @@ import priorityBlue from "../../assets/salvar-azul.png";
 
 import "./Words.css";
 
-const Words = ( {frenchWords} ) => {
+const Words = ( {allWords} ) => {
 
     return(
         <main className="words-section">
-            {frenchWords.map(french => {
+            {allWords.map(french => {
                 return(
                     <div className="words-container">
                         <LuAudioLines className="audio-icon" />
